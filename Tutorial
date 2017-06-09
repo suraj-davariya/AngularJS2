@@ -1,0 +1,36 @@
+* READ - tree shaking concept , lazy loading concepts
+
+*Diff bw angular 1 and ng2
+    -> ng2 is component based and i have used typeScript to create angular2 applications
+    -> ng2 has removed 2 ways data binding, it has only uni directional data binding.
+    -> ng2 is more modular then ng1, it has js module and angular module
+    -> ng2 has ahead-of-time compilation (AOT) ----------- it loads templates at the very beginning before even data comes from backend
+    -> they made ng2 mobiler keeping in mind , mobile loads angular site more faster
+    -> ng2 has its own CLI , no need to install yeoman
+
+1. 4 things in angular2
+
+    component   :
+    service     :
+    directive   :
+    router     :
+
+
+2. App.component.ts is the first file that has module which is going to be load in index.html.
+For every component will be written into a new component file.
+We must need to export the class if we want to use it somewhere else.
+
+
+    file :      story.component.ts
+
+        export class StoryComponent {
+        nane : string
+        name = "Viraj";
+        }
+
+        @Component ()
+        // COMPONENT : This is a decorator
+
+
+
+    2.

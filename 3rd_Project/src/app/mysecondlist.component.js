@@ -11,6 +11,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var data_service_1 = require("./data.service"); //import the service we want to use
 var SecondListComponent = (function () {
@@ -18,16 +19,15 @@ var SecondListComponent = (function () {
         this.ListDataService = ListDataService;
         this.names = ListDataService.serviceArrObj;
     }
-    SecondListComponent = __decorate([
-        //import the service we want to use
-        core_1.Component({
-            selector: "my-second-list",
-            template: "<ul>\n                    <li *ngFor=\"let name of names\">\n                        {{ name }}\n                    </li>    \n                </ul>",
-            providers: [data_service_1.ListDataService]
-        }), 
-        __metadata('design:paramtypes', [data_service_1.ListDataService])
-    ], SecondListComponent);
     return SecondListComponent;
 }());
+SecondListComponent = __decorate([
+    core_1.Component({
+        selector: "my-second-list",
+        template: "<ul>\n                    <li *ngFor=\"let name of names\">\n                        {{ name }}\n                    </li>    \n                </ul>",
+        providers: [data_service_1.ListDataService]
+    }),
+    __metadata("design:paramtypes", [data_service_1.ListDataService])
+], SecondListComponent);
 exports.SecondListComponent = SecondListComponent;
 //# sourceMappingURL=mysecondlist.component.js.map

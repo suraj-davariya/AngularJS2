@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { highlight } from "./highlight.directive";
+import { HomePageComponent } from "./homepage.component";
+import { AboutPageComponent } from "./aboutpage.component";
 
 
 @Component({
@@ -17,10 +19,11 @@ import { highlight } from "./highlight.directive";
             <h3 highlight>This is custom directive in orange color</h3>
             <header>
                 <ul>
-                    <li><a></a></li>
-                    <li></li>
+                    <li><a routerLink="/home">Home</a></li>
+                    <li><a routerLink="/about">About</a></li>
                 </ul>
             </header>
+            <router-outlet></router-outlet>
 
             `
 

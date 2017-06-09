@@ -11,6 +11,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var ListComponent = (function () {
     function ListComponent() {
@@ -20,32 +21,29 @@ var ListComponent = (function () {
     ListComponent.prototype.vote = function (agreed) {
         this.onVoted.emit(agreed);
     };
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Array)
-    ], ListComponent.prototype, "nameszzz", void 0);
-    __decorate([
-        // coming from names in component.ts
-        core_1.Input(), 
-        __metadata('design:type', String)
-    ], ListComponent.prototype, "title", void 0);
-    __decorate([
-        core_1.Input('x'), 
-        __metadata('design:type', String)
-    ], ListComponent.prototype, "randomText", void 0);
-    __decorate([
-        // alias name x; now we need to pass this x to component.ts
-        core_1.Output(), 
-        __metadata('design:type', Object)
-    ], ListComponent.prototype, "onVoted", void 0);
-    ListComponent = __decorate([
-        core_1.Component({
-            selector: 'my-list',
-            template: "\n                <!-- Getting value from parent component ------------starts-->\n                <h2> {{ title }} </h2>\n                <ul>\n                    <li *ngFor=\"let nam of nameszzz\"> {{ nam }}</li>\n                </ul>\n\n                <p> {{ randomText }} </p>\n                <!-- Getting value from parent component -------------ends -->\n                \n                <!-- Passing value to parent component *************starts -->\n                \n                <button (click)=\"vote(true)\">Agree</button>\n                <button (click)=\"vote(false)\">Disagree</button>\n                <!-- Passing value to parent component *************ends -->\n                "
-        }), 
-        __metadata('design:paramtypes', [])
-    ], ListComponent);
     return ListComponent;
 }());
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Array)
+], ListComponent.prototype, "nameszzz", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", String)
+], ListComponent.prototype, "title", void 0);
+__decorate([
+    core_1.Input('x'),
+    __metadata("design:type", String)
+], ListComponent.prototype, "randomText", void 0);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", Object)
+], ListComponent.prototype, "onVoted", void 0);
+ListComponent = __decorate([
+    core_1.Component({
+        selector: 'my-list',
+        template: "\n                <!-- Getting value from parent component ------------starts-->\n                <h2> {{ title }} </h2>\n                <ul>\n                    <li *ngFor=\"let nam of nameszzz\"> {{ nam }}</li>\n                </ul>\n\n                <p> {{ randomText }} </p>\n                <!-- Getting value from parent component -------------ends -->\n                \n                <!-- Passing value to parent component *************starts -->\n                \n                <button (click)=\"vote(true)\">Agree</button>\n                <button (click)=\"vote(false)\">Disagree</button>\n                <!-- Passing value to parent component *************ends -->\n                "
+    })
+], ListComponent);
 exports.ListComponent = ListComponent;
 //# sourceMappingURL=mylist.component.js.map
